@@ -20,8 +20,8 @@ html {
 
 :root {
    /* Colors */
-   --White: #f1f7ff;
-   --White_Dark: #939eaa;
+   --White: #d3dfee;
+   --White_Dark: #53595e6e;
    --Orange: #f87612;
    --Black: #090909;
    --Black_Light: #0909098c;
@@ -44,6 +44,32 @@ html {
    src: url(Font/PP_Supply_Mono_Semibold.ttf);
 }
 
+#overlay {
+   position: fixed;
+   inset: 0;
+   z-index: 99999999;
+   mix-blend-mode: multiply;
+   opacity: 0.12;
+   pointer-events: none;
+}
+
+#wrapper {
+   width: 100%;
+   position: relative;
+}
+
+#wrapper_bg {
+   position: absolute;
+   inset: 0;
+   z-index: 2;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+
+   & div:not(:last-child) {
+      border-right: solid 0.005em var(--White_Dark);
+   }
+}
+
 nav {
    position: fixed;
    inset: 0 0 auto 0;
@@ -51,7 +77,9 @@ nav {
    align-items: center;
    justify-content: space-between;
    padding: 1em clamp(1em, 4vw, 3em);
-   background-color: var(--Black_Light);
+   background-color: var(--Black);
+   z-index: 9;
+   border-bottom: solid 0.005em var(--White_Dark);
 }
 
 .nav_frame_links {
@@ -70,6 +98,10 @@ nav {
       color: var(--Black);
    }
 
+   & svg {
+      stroke: var(--White);
+   }
+
    &:hover .frames {
       padding: 0.3em;
    }
@@ -80,6 +112,7 @@ nav {
 }
 
 .frames {
+   pointer-events: none;
    width: 100%;
    height: 100%;
    inset: 0;
@@ -107,7 +140,6 @@ nav {
       transition: 200ms ease-in-out;
       transition-property: stroke;
       width: 0.6em;
-      stroke: var(--White);
    }
 }
 
@@ -127,6 +159,13 @@ nav {
 .nav_logo_svg {
    color: var(--White);
    width: clamp(9em, 22vw, 18em);
+}
+
+main {
+   height: 90vh;
+   height: 90svh;
+   position: relative;
+   border-bottom: solid 0.005em var(--White_Dark);
 }
 
 @media (width <= 800px) {
