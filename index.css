@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+body,
+html {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+   width: 100%;
+}
+
+:root {
+   /* Colors */
+   --White: #d4e0ee;
+   --White_Dark: #939eaa;
+   --Orange: #f87612;
+}
