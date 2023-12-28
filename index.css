@@ -5,6 +5,11 @@
    box-sizing: border-box;
    scroll-behavior: smooth;
    text-decoration: none;
+
+   &::selection {
+      background-color: var(--Orange);
+      color: var(--Black);
+   }
 }
 
 body,
@@ -21,6 +26,7 @@ html {
 :root {
    /* Colors */
    --White: #d3dfee;
+   --White_Light: #d3dfee80;
    --White_Dark: #53595e6e;
    --Orange: #f87612;
    --Black: #090909;
@@ -59,9 +65,9 @@ html {
 }
 
 #wrapper_bg {
+   pointer-events: none;
    position: absolute;
    inset: 0;
-   z-index: 2;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
 
@@ -89,7 +95,7 @@ nav {
    font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
    font-size: clamp(0.9rem, 1.5vw, 1rem);
    position: relative;
-   border-radius: 0.3em;
+   border-radius: 0.2em;
    transition: 200ms ease-in-out;
    transition-property: background-color, color;
 
@@ -166,6 +172,39 @@ main {
    height: 90svh;
    position: relative;
    border-bottom: solid 0.005em var(--White_Dark);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 2em;
+   z-index: 2;
+}
+
+.hero_big_title_div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   & h1 {
+      font-family: PP_Supply_Mono_Semibold, Arial, Helvetica, sans-serif;
+      font-size: clamp(2.2rem, 9vw, 6rem);
+      line-height: 0.7;
+      color: var(--White);
+   }
+
+   & span h1 {
+      color: var(--Orange);
+   }
+}
+
+.hero_small_title_div p {
+   font-family: Aeonik_Medium, Arial, Helvetica, sans-serif;
+   font-size: clamp(1.1rem, 2vw, 1.5rem);
+   color: var(--White_Light);
+   text-align: center;
+   width: 70%;
+   margin-inline: auto;
 }
 
 @media (width <= 800px) {
