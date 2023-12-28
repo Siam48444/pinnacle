@@ -4,6 +4,7 @@
    margin: 0;
    box-sizing: border-box;
    scroll-behavior: smooth;
+   text-decoration: none;
 }
 
 body,
@@ -13,11 +14,116 @@ html {
    box-sizing: border-box;
    scroll-behavior: smooth;
    width: 100%;
+   overflow: hidden auto;
+   background-color: var(--Black);
 }
 
 :root {
    /* Colors */
-   --White: #d4e0ee;
+   --White: #f1f7ff;
    --White_Dark: #939eaa;
    --Orange: #f87612;
+   --Black: #090909;
+   --Black_Light: #0909098c;
+}
+
+@font-face {
+   font-family: Aeonik_Medium;
+   src: url(Font/Aeonik_Medium.ttf);
+}
+@font-face {
+   font-family: Aeonik_Regular;
+   src: url(Font/Aeonik_Regular.ttf);
+}
+@font-face {
+   font-family: PP_Supply_Mono_Regular;
+   src: url(Font/PP_Supply_Mono_Regular.ttf);
+}
+@font-face {
+   font-family: PP_Supply_Mono_Semibold;
+   src: url(Font/PP_Supply_Mono_Semibold.ttf);
+}
+
+nav {
+   position: fixed;
+   inset: 0 0 auto 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1em 3em;
+   background-color: var(--Black_Light);
+}
+
+.nav_frame_links {
+   background-color: transparent;
+   padding: 0.8em 2em;
+   color: var(--White);
+   font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
+   position: relative;
+   border-radius: 0.3em;
+   transition: 200ms ease-in-out;
+   transition-property: background-color, color;
+
+   &:hover {
+      background-color: var(--Orange);
+      color: var(--Black);
+   }
+
+   &:hover .frames {
+      padding: 0.3em;
+   }
+
+   &:hover .frames svg {
+      stroke: var(--Black);
+   }
+}
+
+.frames {
+   width: 100%;
+   height: 100%;
+   inset: 0;
+   position: absolute;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   transform-origin: center;
+   transition: 200ms ease-in-out;
+   transition-property: padding;
+
+   & div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &:nth-child(1) {
+         align-items: start;
+      }
+      &:nth-child(2) {
+         align-items: end;
+      }
+   }
+
+   & svg {
+      transition: 200ms ease-in-out;
+      transition-property: stroke;
+      width: 0.6em;
+      stroke: var(--White);
+   }
+}
+
+.s1 {
+   rotate: 0deg;
+}
+.s2 {
+   rotate: -90deg;
+}
+.s3 {
+   rotate: 90deg;
+}
+.s4 {
+   rotate: 180deg;
+}
+
+.nav_logo_svg {
+   color: var(--White);
+   width: 18em;
 }
