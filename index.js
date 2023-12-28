@@ -1,8 +1,8 @@
 // nav changing position on scroll.
-var oldScrollY = window.scrollY;
+var old_Y = window.scrollY;
 
 window.addEventListener("scroll", () => {
-   if (oldScrollY < window.scrollY) {
+   if (old_Y < window.scrollY) {
       gsap.to("nav", {
          y: "-100%",
          duration: 0.5,
@@ -15,5 +15,5 @@ window.addEventListener("scroll", () => {
          ease: "Power5.easeInOut",
       });
    }
-   oldScrollY = window.scrollY;
+   old_Y = window.scrollY;
 });
