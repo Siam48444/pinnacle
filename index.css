@@ -83,7 +83,8 @@ nav {
    align-items: center;
    justify-content: space-between;
    padding: 1em clamp(1em, 4vw, 3em);
-   background-color: var(--Black);
+   background-color: var(--Black_Light);
+   backdrop-filter: blur(15px);
    z-index: 9;
    border-bottom: solid 0.005em var(--White_Dark);
 }
