@@ -226,10 +226,11 @@ main {
    font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
    font-size: clamp(0.9rem, 1.5vw, 1rem);
    transition: 200ms ease-in-out;
-   transition-property: background-color;
+   transition-property: background-color, border-radius;
 
    &:hover {
       background-color: var(--Orange);
+      border-radius: 0.8em 0 0.8em 0;
    }
 }
 
@@ -282,7 +283,7 @@ main {
    & .frames svg {
       opacity: 0.5;
       stroke: var(--White_Light);
-      width: 0.8em;
+      width: clamp(0.5em, 1vw, 0.8em);
       transition: 200ms ease-in-out;
       transition-property: stroke, opacity;
    }
