@@ -173,6 +173,12 @@ nav {
 .nav_logo_svg {
    color: var(--White);
    width: clamp(10em, 25vw, 18em);
+   transition: 200ms ease-in-out;
+   transition-property: color;
+
+   &:hover {
+      color: var(--Orange);
+   }
 }
 
 main {
