@@ -66,6 +66,15 @@ html {
    position: fixed;
    background-color: var(--Orange);
    inset: 0;
+
+   & .frames {
+      padding: clamp(1em, 3vw, 3em);
+   }
+
+   & .frames svg {
+      stroke: var(--Black);
+      width: clamp(1em, 3vw, 2em);
+   }
 }
 .lines {
    background-color: var(--Black_Lighter);
@@ -85,8 +94,8 @@ html {
 .circle {
    position: absolute;
    border: solid 0.05vh var(--Black_Lighter);
-   width: 80vh;
-   height: 80vh;
+   width: 90vmin;
+   height: 90vmin;
    border-radius: 50%;
    left: 50%;
    top: 50%;
