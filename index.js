@@ -32,7 +32,7 @@ tl.to("#loader_div", {
    y: "-100%",
    pointerEvents: "none",
    duration: 0.8,
-   delay: 0.5,
+   delay: 1,
    ease: "expo.out",
 });
 tl.from("main div, main a, #area2", {
