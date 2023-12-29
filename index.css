@@ -92,14 +92,17 @@ nav {
 
 .nav_frame_links {
    background-color: transparent;
-   padding: clamp(0.7em, 1vw, 0.8em) clamp(1.2em, 3vw, 2em);
-   color: var(--White);
-   font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
-   font-size: clamp(0.9rem, 1.5vw, 1rem);
+   padding: clamp(0.5em, 1vw, 0.75em) clamp(0.8em, 3vw, 2em);
    position: relative;
    border-radius: 0.2em;
    transition: 200ms ease-in-out;
    transition-property: background-color, color;
+
+   & p {
+      color: var(--White);
+      font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
+      font-size: clamp(0.75rem, 1.2vw, 1rem);
+   }
 
    &:hover {
       background-color: var(--Orange);
@@ -166,19 +169,19 @@ nav {
 
 .nav_logo_svg {
    color: var(--White);
-   width: clamp(9em, 22vw, 18em);
+   width: clamp(10em, 25vw, 18em);
 }
 
 main {
-   height: 90vh;
-   height: 90svh;
+   height: 500vh;
+   height: 500svh;
    position: relative;
    border-bottom: solid 0.005em var(--White_Dark);
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   gap: 2em;
+   gap: clamp(1.2em, 3vw, 2em);
    z-index: 2;
 }
 
@@ -191,7 +194,7 @@ main {
    & h1 {
       font-family: PP_Supply_Mono_Semibold, Arial, Helvetica, sans-serif;
       font-size: clamp(2.2rem, 9vw, 6rem);
-      line-height: 0.7;
+      line-height: 0.8;
       color: var(--White);
    }
 
@@ -211,15 +214,24 @@ main {
 
 .hero_button {
    background-color: var(--White);
-   padding: 1em 3em;
+   padding: clamp(0.8em, 1.5vw, 1em) clamp(2em, 4vw, 3em);
    color: var(--Black);
    font-family: PP_Supply_Mono_Semibold, Arial, Helvetica, sans-serif;
-   font-size: 1rem;
+   font-size: clamp(0.9rem, 1.5vw, 1rem);
    user-select: none;
+   border-radius: 0.4em;
+   position: relative;
+   overflow: hidden;
 }
 
 @media (width <= 800px) {
    .nav_left {
       display: none;
+   }
+}
+
+@media (width <= 300px) {
+   .nav_logo_svg {
+      width: 8em;
    }
 }
