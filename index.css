@@ -106,6 +106,8 @@ nav {
 
    &:hover {
       background-color: var(--Orange);
+   }
+   &:hover p {
       color: var(--Black);
    }
 
@@ -173,8 +175,8 @@ nav {
 }
 
 main {
-   height: 500vh;
-   height: 500svh;
+   height: 90vh;
+   height: 90svh;
    position: relative;
    border-bottom: solid 0.005em var(--White_Dark);
    display: flex;
@@ -212,16 +214,37 @@ main {
    margin-inline: auto;
 }
 
-.hero_button {
+.hovering_buttons {
    background-color: var(--White);
    padding: clamp(0.8em, 1.5vw, 1em) clamp(2em, 4vw, 3em);
-   color: var(--Black);
-   font-family: PP_Supply_Mono_Semibold, Arial, Helvetica, sans-serif;
-   font-size: clamp(0.9rem, 1.5vw, 1rem);
    user-select: none;
    border-radius: 0.4em;
    position: relative;
    overflow: hidden;
+   color: var(--Black);
+   font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
+   font-size: clamp(0.9rem, 1.5vw, 1rem);
+
+   &::after {
+      position: absolute;
+      content: "FIND YOUR PLAN";
+      background-color: var(--Orange);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      transition: 200ms ease-in-out;
+      transition-property: transform;
+   }
+
+   &:hover::after {
+      transform: translateY(0);
+   }
 }
 
 @media (width <= 800px) {
