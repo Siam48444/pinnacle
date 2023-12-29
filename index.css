@@ -190,7 +190,7 @@ nav {
 
    & svg {
       stroke: var(--White);
-      width: 0.6em;
+      width: clamp(0.4em, 1vw, 0.6em);
    }
 
    &:hover .frames {
