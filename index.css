@@ -318,7 +318,7 @@ main {
    & h6 {
       color: var(--Orange);
       font-family: PP_Supply_Mono_Semibold, Arial, Helvetica, sans-serif;
-      font-size: clamp(0.8rem, 1.5vw, 1rem);
+      font-size: clamp(0.9rem, 1.5vw, 1.2rem);
    }
 
    & .frames svg {
