@@ -32,6 +32,7 @@ html {
    --orange_Faded: #f1700e3b;
    --Black: #090909;
    --Black_Light: #0909098c;
+   --Black_Lighter: #09090931;
 }
 
 @font-face {
@@ -58,6 +59,38 @@ html {
    mix-blend-mode: multiply;
    opacity: 0.12;
    pointer-events: none;
+}
+
+#loader_div {
+   z-index: 99999;
+   position: fixed;
+   background-color: var(--Orange);
+   inset: 0;
+}
+.lines {
+   background-color: var(--Black_Lighter);
+   position: absolute;
+}
+.line1 {
+   width: 100%;
+   height: 0.05vh;
+   top: 50%;
+}
+.line2 {
+   height: 100%;
+   width: 0.05vh;
+   left: 50%;
+}
+
+.circle {
+   position: absolute;
+   border: solid 0.05vh var(--Black_Lighter);
+   width: 80vh;
+   height: 80vh;
+   border-radius: 50%;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
 }
 
 #wrapper {
