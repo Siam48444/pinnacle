@@ -29,7 +29,7 @@ html {
    --White_Light: #d3dfee80;
    --White_Dark: #53595e6e;
    --Orange: #f87612;
-   --orange_Faded: #f57d2275;
+   --orange_Faded: #f1700e3b;
    --Black: #090909;
    --Black_Light: #0909098c;
 }
@@ -286,6 +286,75 @@ main {
       transition: 200ms ease-in-out;
       transition-property: stroke, opacity;
    }
+}
+
+#area3 {
+   height: 90vh;
+   height: 90svh;
+   z-index: 2;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   position: relative;
+   gap: 2em;
+
+   & p {
+      font-family: Aeonik_Medium, Arial, Helvetica, sans-serif;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      color: var(--White_Light);
+      text-align: center;
+      width: 70%;
+   }
+}
+
+.fade_orange_titles {
+   background-color: var(--orange_Faded);
+   padding: clamp(0.8em, 1.5vw, 1em) clamp(1.5em, 4vw, 3em);
+   user-select: none;
+   border-radius: 0 0.8em 0 0.8em;
+   position: relative;
+
+   & h6 {
+      color: var(--Orange);
+      font-family: PP_Supply_Mono_Semibold, Arial, Helvetica, sans-serif;
+      font-size: clamp(0.8rem, 1.5vw, 1rem);
+   }
+
+   & .frames svg {
+      stroke: var(--Orange);
+      width: 0.7em;
+   }
+}
+
+.area3_big_title_div {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   position: relative;
+}
+
+.orange_texts_shutters_div {
+   position: relative;
+   width: fit-content;
+   height: fit-content;
+
+   & h1 {
+      font-family: PP_Supply_Mono_Semibold, Arial, Helvetica, sans-serif;
+      font-size: clamp(2.2rem, 9vw, 6rem);
+      line-height: 1;
+      color: var(--White);
+   }
+}
+
+.orange_shutters {
+   background-color: var(--Orange);
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   bottom: 0;
+   z-index: 2;
 }
 
 .spacer {

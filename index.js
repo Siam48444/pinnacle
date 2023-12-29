@@ -14,6 +14,19 @@ function scrollingdUp() {
 }
 
 // gsap timelime.
-var tl = gsap.timelone();
+var tl = gsap.timeline();
 
 // gsap animations on load.
+
+// text orange shutters revealing on scroll.
+const orangeShutters = document.querySelectorAll(".orange_shutters");
+orangeShutters.forEach((shutter) => {
+   gsap.to(shutter, {
+      height: 0,
+      scrollTrigger: {
+         trigger: shutter,
+         end: "bottom 80%",
+         scrub: 1,
+      },
+   });
+});
