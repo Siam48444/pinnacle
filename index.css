@@ -29,6 +29,7 @@ html {
    --White_Light: #d3dfee80;
    --White_Dark: #53595e6e;
    --Orange: #f87612;
+   --orange_Faded: #f8761285;
    --Black: #090909;
    --Black_Light: #0909098c;
 }
@@ -113,6 +114,7 @@ nav {
 
    & svg {
       stroke: var(--White);
+      width: 0.6em;
    }
 
    &:hover .frames {
@@ -152,7 +154,6 @@ nav {
    & svg {
       transition: 200ms ease-in-out;
       transition-property: stroke;
-      width: 0.6em;
    }
 }
 
@@ -224,52 +225,65 @@ main {
    color: var(--Black);
    font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
    font-size: clamp(0.9rem, 1.5vw, 1rem);
-
-   &::after {
-      position: absolute;
-      content: "FIND YOUR PLAN";
-      background-color: var(--Orange);
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      transform: translateY(-100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-      transition: 200ms ease-in-out;
-      transition-property: transform;
-   }
-
-   &:hover::after {
-      transform: translateY(0);
-   }
 }
 
 #area2 {
-   overflow: hidden;
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
+   overflow: auto hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    position: relative;
    border-bottom: solid 0.005em var(--White_Dark);
    z-index: 2;
 }
 
-.area2_images_div {
-   width: 100%;
-   height: 100%;
-   position: relative;
-   aspect-ratio: 1 / 1;
+.images_div {
+   aspect-ratio: 1 / 0.8;
    display: flex;
    align-items: center;
    justify-content: center;
+   position: relative;
+   padding: 3em;
+
+   &:hover > img {
+      border-color: var(--Orange);
+   }
+
+   &:hover > .frames {
+      padding: 1.5em;
+   }
+
+   &:hover > .frames svg {
+      stroke: var(--Orange);
+      opacity: 1;
+   }
 
    & img {
-      width: 70%;
-      height: 70%;
+      border: solid 0.005em var(--White_Dark);
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      transition: 200ms ease-in-out;
+      transition-property: border-color;
    }
+
+   & .frames {
+      padding: 2em;
+      transition: 200ms ease-in-out;
+      transition-property: padding;
+   }
+
+   & .frames svg {
+      opacity: 0.5;
+      stroke: var(--White_Light);
+      width: 0.8em;
+      transition: 200ms ease-in-out;
+      transition-property: stroke, opacity;
+   }
+}
+
+.spacer {
+   height: 300vh;
 }
 
 @media (width <= 800px) {
