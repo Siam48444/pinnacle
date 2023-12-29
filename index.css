@@ -76,6 +76,24 @@ html {
       width: clamp(1em, 3vw, 2em);
    }
 }
+
+.loader_cross_div {
+   width: 100%;
+   height: fit-content;
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   top: 50%;
+   transform: translateY(-50%);
+   padding-inline: clamp(0.5em, 3vw, 3em);
+
+   & svg {
+      stroke: var(--Black);
+      width: clamp(1em, 3vw, 2em);
+   }
+}
+
 .lines {
    background-color: var(--Black_Lighter);
    position: absolute;
