@@ -7,16 +7,8 @@ window.addEventListener("scroll", () => {
 });
 
 function scrollingdDown() {
-   gsap.to("nav", {
-      y: "-100%",
-      duration: 0.5,
-      ease: "Power5.easeInOut",
-   });
+   gsap.to("nav", { y: "-105%", duration: 0.5, ease: "Power5.easeInOut" });
 }
 function scrollingdUp() {
-   gsap.to("nav", {
-      y: 0,
-      duration: 0.5,
-      ease: "Power5.easeInOut",
-   });
+   gsap.to("nav", { y: 0, duration: 0.5, ease: "Power5.easeInOut" });
 }
