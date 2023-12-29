@@ -235,16 +235,17 @@ main {
 
 #area2 {
    overflow: auto hidden;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
    position: relative;
    border-bottom: solid 0.005em var(--White_Dark);
    z-index: 2;
 }
 
 .images_div {
-   aspect-ratio: 1 / 0.8;
+   width: 100%;
+   height: fit-content;
+   aspect-ratio: 2 / 1.5;
    display: flex;
    align-items: center;
    justify-content: center;

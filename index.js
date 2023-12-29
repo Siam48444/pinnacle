@@ -28,6 +28,13 @@ function scrollingdUp() {
 var tl = gsap.timeline();
 
 // gsap animations on load.
+tl.from("main div, main a, #area2", {
+   y: 200,
+   duration: 0.7,
+   opacity: 0,
+   ease: "Power5.easeInOut",
+   stagger: 0.1,
+});
 
 // text orange shutters revealing on scroll.
 const orangeShutters = document.querySelectorAll(".orange_shutters");
