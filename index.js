@@ -28,6 +28,13 @@ function scrollingdUp() {
 var tl = gsap.timeline();
 
 // gsap animations on load.
+tl.to("#loader_div", {
+   y: "-100%",
+   pointerEvents: "none",
+   duration: 0.6,
+   delay: 0.3,
+   ease: "expo.out",
+});
 tl.from("main div, main a, #area2", {
    y: 200,
    duration: 0.7,
