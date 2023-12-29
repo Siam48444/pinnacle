@@ -12,3 +12,8 @@ function scrollingdDown() {
 function scrollingdUp() {
    gsap.to("nav", { y: 0, duration: 0.5, ease: "Power5.easeInOut" });
 }
+
+// gsap timelime.
+var tl = gsap.timelone();
+
+// gsap animations on load.
