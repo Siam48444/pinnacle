@@ -305,6 +305,7 @@ main {
    position: relative;
    overflow: hidden;
    color: var(--Black);
+   text-align: center;
    font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
    font-size: clamp(0.9rem, 1.5vw, 1rem);
    transition: 200ms ease-in-out;
@@ -332,7 +333,7 @@ main {
    align-items: center;
    justify-content: center;
    position: relative;
-   padding: clamp(1em, 4vw, 3em);
+   padding: clamp(1.5em, 4vw, 3em);
 
    &:hover > img {
       border-color: var(--Orange);
@@ -402,6 +403,7 @@ main {
       color: var(--Orange);
       font-family: PP_Supply_Mono_Semibold, Arial, Helvetica, sans-serif;
       font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+      text-align: center;
    }
 
    & .frames svg {
@@ -463,6 +465,11 @@ main {
 @media (width <= 400px) {
    #area2 {
       grid-template-columns: repeat(1, 1fr);
+   }
+
+   .hovering_buttons,
+   .fade_orange_titles {
+      width: 80%;
    }
 }
 

@@ -31,8 +31,8 @@ var tl = gsap.timeline();
 tl.to("#loader_div", {
    y: "-100%",
    pointerEvents: "none",
-   duration: 0.6,
-   delay: 0.3,
+   duration: 0.8,
+   delay: 0.5,
    ease: "expo.out",
 });
 tl.from("main div, main a, #area2", {
