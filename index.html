@@ -1,546 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Pinnacle Design Lab | Unlimited Design Subscription</title>
-      <link rel="stylesheet" href="index.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinnacle Design Lab | Unlimited Design Subscription</title>
+    <link rel="stylesheet" href="index.css" />
 
-      <!-- Favicon -->
-      <link rel="shortcut icon" href="https://framerusercontent.com/images/kcBSQosINGD4bbhBy9mr6uGBhEI.svg" type="image/x-icon" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://framerusercontent.com/images/kcBSQosINGD4bbhBy9mr6uGBhEI.svg" type="image/x-icon" />
 
-      <!-- Lenis Smooth Scroll -->
-      <link rel="stylesheet" href="lenisSmoothScroll.css" />
+    <!-- Lenis Smooth Scroll -->
+    <link rel="stylesheet" href="lenisSmoothScroll.css" />
 
-      <!-- Remix Icon -->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
-   </head>
-   <body>
-      <div id="overlay" style="background-image: url('Image/Overlay.png')"></div>
-      <div id="loader_div">
-         <div class="loader_content">
-            <svg class="nav_logo_svg" overflow="visible" viewBox="0 0 268 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-               <path stroke-width="0" d="M28.7894 0L34.3744 5.71184V17.1041H5.58508V19.5521L3.17825 21.9686H0V0H28.7894ZM28.7894 13.8402V3.26391L26.3825 5.71184H7.9919L5.58508 3.26391V13.8402L7.9919 11.3923H26.3825L28.7894 13.8402Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M40.6951 0L43.1019 2.44793V21.9686H39.8928L37.486 19.5521V0H40.6951Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M69.3373 16.2882H78.1932L80.5692 18.7361V21.9686H67.0231C66.9922 21.9372 51.8107 6.52782 51.7798 6.49644V19.5521L49.373 21.9686H46.1948V0H53.3535L69.3373 16.2882ZM77.391 0H80.5692V11.3923L78.1932 13.8402H74.9841V2.44793L77.391 0Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M106.823 16.2882H115.679L118.055 18.7361V21.9686H104.509C104.478 21.9372 89.2967 6.52782 89.2658 6.49644V19.5521L86.859 21.9686H83.6808V0H90.8395L106.823 16.2882ZM114.877 0H118.055V11.3923L115.679 13.8402H112.47V2.44793L114.877 0Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M149.956 0L155.542 5.71184V21.9686H152.363L149.956 19.5521V14.6562L147.55 17.1041H126.752V19.5521L124.345 21.9686H121.167V5.71184L126.752 0H149.956ZM149.956 11.3923V3.26391L147.55 5.71184H129.159L126.752 3.26391V13.8402L129.159 11.3923H149.956Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M166.645 5.71184L164.238 3.26391V18.7361L166.645 16.2882H190.652L193.028 18.7361V21.9686H164.238L158.653 16.2882V5.71184L164.238 0H193.028V3.26391L190.652 5.71184H166.645Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M228.138 16.2882L230.514 18.7361V21.9686H196.14V0H199.318L201.725 2.44793V18.7361L204.131 16.2882H228.138Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M241.617 16.2882H265.624L268 18.7361V22H233.626V10.6077L236.002 8.15977H252.016V11.4237L249.609 13.8716H241.617L239.211 11.4237V18.7361L241.617 16.2882ZM233.626 0.0313761H268V3.29529L265.624 5.71184H236.002L233.626 3.29529V0.0313761Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M88.9364 31L90.1236 32.2325V38.7675L88.9364 39.9872H83V31H88.9364ZM88.9364 38.7675V32.2325H84.1873V38.7675H88.9364Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M94.6369 38.7675H100.573V39.9872H93.4496V31H100.573V32.2325H94.6369V35.622L95.4408 34.7746H99.9796V36.0071H94.6369V38.7675Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M110.936 33.465H109.749V32.2325H105V34.7746H109.749L110.936 36.0071V38.7675L109.749 39.9872H105L103.812 38.7675V37.5349H105V38.7675H109.749V36.0071H105L103.812 34.7746V32.2325L105 31.0128H109.749L110.936 32.2325V33.465Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M120.178 32.2325H118.335V38.7675H120.178V39.9872H115.305V38.7675H117.148V32.2325H115.305V31H120.178V32.2325Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M125.816 31H130.565L131.752 32.2325V33.4651H130.565V32.2325H125.816V38.7675H130.565V36.418H128.191V35.1983H131.752V38.7675L130.565 39.9872H125.816L124.629 38.7675V32.2325L125.816 31Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M141.015 31H142.202V40H141.015V36.0071H139.716L136.266 32.4251V40H135.078V31H136.575L141.015 35.622V31Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M163.472 38.7675V39.9872H156.348V31H157.536V38.7675H163.472Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M167.614 31H172.363L173.551 32.2325V39.9872H172.363V36.418H167.614V39.9872H166.427V32.2325L167.614 31ZM168.418 35.1983H172.363V32.2325H167.614V36.0328L168.418 35.1983Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M184 32.2325V34.6205L183.246 35.3909L184 36.174V38.7675L182.813 39.9872H176.876V31H182.813L184 32.2325ZM182.813 38.7675V36.0071H178.064V38.7675H182.813ZM182.813 34.7746V32.2325H178.064V35.622L178.868 34.7746H182.813Z" fill="currentColor"></path>
-            </svg>
-         </div>
-         <span class="frames">
-            <div>
-               <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_102_2)">
-                     <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="5" />
-                  </g>
-                  <defs>
-                     <clipPath id="clip0_102_2">
-                        <rect width="127" height="127" fill="var(--White)" />
-                     </clipPath>
-                  </defs>
-               </svg>
-               <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_102_2)">
-                     <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="5" />
-                  </g>
-                  <defs>
-                     <clipPath id="clip0_102_2">
-                        <rect width="127" height="127" fill="var(--White)" />
-                     </clipPath>
-                  </defs>
-               </svg>
-            </div>
-            <div>
-               <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_102_2)">
-                     <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="5" />
-                  </g>
-                  <defs>
-                     <clipPath id="clip0_102_2">
-                        <rect width="127" height="127" fill="var(--White)" />
-                     </clipPath>
-                  </defs>
-               </svg>
-               <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_102_2)">
-                     <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="5" />
-                  </g>
-                  <defs>
-                     <clipPath id="clip0_102_2">
-                        <rect width="127" height="127" fill="var(--White)" />
-                     </clipPath>
-                  </defs>
-               </svg>
-            </div>
-         </span>
-         <div class="loader_cross_div">
-            <svg viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-               <path d="M63.5 0L63.5 127M126.5 64L-0.5 64" stroke="#090909" stroke-width="5" />
-            </svg>
-            <svg viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-               <path d="M63.5 0L63.5 127M126.5 64L-0.5 64" stroke="#090909" stroke-width="5" />
-            </svg>
-         </div>
-         <div class="line1 lines"></div>
-         <div class="circle"></div>
-         <div class="line2 lines"></div>
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="overlay" style="background-image: url('Image/Overlay.png')"></div>
+    <div id="loader_div">
+      <div class="loader_content">
+        <svg class="nav_logo_svg" overflow="visible" viewBox="0 0 268 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-width="0" d="M28.7894 0L34.3744 5.71184V17.1041H5.58508V19.5521L3.17825 21.9686H0V0H28.7894ZM28.7894 13.8402V3.26391L26.3825 5.71184H7.9919L5.58508 3.26391V13.8402L7.9919 11.3923H26.3825L28.7894 13.8402Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M40.6951 0L43.1019 2.44793V21.9686H39.8928L37.486 19.5521V0H40.6951Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M69.3373 16.2882H78.1932L80.5692 18.7361V21.9686H67.0231C66.9922 21.9372 51.8107 6.52782 51.7798 6.49644V19.5521L49.373 21.9686H46.1948V0H53.3535L69.3373 16.2882ZM77.391 0H80.5692V11.3923L78.1932 13.8402H74.9841V2.44793L77.391 0Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M106.823 16.2882H115.679L118.055 18.7361V21.9686H104.509C104.478 21.9372 89.2967 6.52782 89.2658 6.49644V19.5521L86.859 21.9686H83.6808V0H90.8395L106.823 16.2882ZM114.877 0H118.055V11.3923L115.679 13.8402H112.47V2.44793L114.877 0Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M149.956 0L155.542 5.71184V21.9686H152.363L149.956 19.5521V14.6562L147.55 17.1041H126.752V19.5521L124.345 21.9686H121.167V5.71184L126.752 0H149.956ZM149.956 11.3923V3.26391L147.55 5.71184H129.159L126.752 3.26391V13.8402L129.159 11.3923H149.956Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M166.645 5.71184L164.238 3.26391V18.7361L166.645 16.2882H190.652L193.028 18.7361V21.9686H164.238L158.653 16.2882V5.71184L164.238 0H193.028V3.26391L190.652 5.71184H166.645Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M228.138 16.2882L230.514 18.7361V21.9686H196.14V0H199.318L201.725 2.44793V18.7361L204.131 16.2882H228.138Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M241.617 16.2882H265.624L268 18.7361V22H233.626V10.6077L236.002 8.15977H252.016V11.4237L249.609 13.8716H241.617L239.211 11.4237V18.7361L241.617 16.2882ZM233.626 0.0313761H268V3.29529L265.624 5.71184H236.002L233.626 3.29529V0.0313761Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M88.9364 31L90.1236 32.2325V38.7675L88.9364 39.9872H83V31H88.9364ZM88.9364 38.7675V32.2325H84.1873V38.7675H88.9364Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M94.6369 38.7675H100.573V39.9872H93.4496V31H100.573V32.2325H94.6369V35.622L95.4408 34.7746H99.9796V36.0071H94.6369V38.7675Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M110.936 33.465H109.749V32.2325H105V34.7746H109.749L110.936 36.0071V38.7675L109.749 39.9872H105L103.812 38.7675V37.5349H105V38.7675H109.749V36.0071H105L103.812 34.7746V32.2325L105 31.0128H109.749L110.936 32.2325V33.465Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M120.178 32.2325H118.335V38.7675H120.178V39.9872H115.305V38.7675H117.148V32.2325H115.305V31H120.178V32.2325Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M125.816 31H130.565L131.752 32.2325V33.4651H130.565V32.2325H125.816V38.7675H130.565V36.418H128.191V35.1983H131.752V38.7675L130.565 39.9872H125.816L124.629 38.7675V32.2325L125.816 31Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M141.015 31H142.202V40H141.015V36.0071H139.716L136.266 32.4251V40H135.078V31H136.575L141.015 35.622V31Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M163.472 38.7675V39.9872H156.348V31H157.536V38.7675H163.472Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M167.614 31H172.363L173.551 32.2325V39.9872H172.363V36.418H167.614V39.9872H166.427V32.2325L167.614 31ZM168.418 35.1983H172.363V32.2325H167.614V36.0328L168.418 35.1983Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M184 32.2325V34.6205L183.246 35.3909L184 36.174V38.7675L182.813 39.9872H176.876V31H182.813L184 32.2325ZM182.813 38.7675V36.0071H178.064V38.7675H182.813ZM182.813 34.7746V32.2325H178.064V35.622L178.868 34.7746H182.813Z" fill="currentColor"></path>
+        </svg>
       </div>
-      <nav>
-         <a href="#" class="nav_frame_links nav_left">
-            <p>PLANS</p>
-            <span class="frames">
-               <div>
-                  <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                     <g clip-path="url(#clip0_102_2)">
-                        <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                     </g>
-                     <defs>
-                        <clipPath id="clip0_102_2">
-                           <rect width="127" height="127" fill="var(--White)" />
-                        </clipPath>
-                     </defs>
-                  </svg>
-                  <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                     <g clip-path="url(#clip0_102_2)">
-                        <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                     </g>
-                     <defs>
-                        <clipPath id="clip0_102_2">
-                           <rect width="127" height="127" fill="var(--White)" />
-                        </clipPath>
-                     </defs>
-                  </svg>
-               </div>
-               <div>
-                  <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                     <g clip-path="url(#clip0_102_2)">
-                        <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                     </g>
-                     <defs>
-                        <clipPath id="clip0_102_2">
-                           <rect width="127" height="127" fill="var(--White)" />
-                        </clipPath>
-                     </defs>
-                  </svg>
-                  <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                     <g clip-path="url(#clip0_102_2)">
-                        <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                     </g>
-                     <defs>
-                        <clipPath id="clip0_102_2">
-                           <rect width="127" height="127" fill="var(--White)" />
-                        </clipPath>
-                     </defs>
-                  </svg>
-               </div>
-            </span>
-         </a>
-         <a href="index.html" class="nav_logo">
-            <svg class="nav_logo_svg" overflow="visible" viewBox="0 0 268 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-               <path stroke-width="0" d="M28.7894 0L34.3744 5.71184V17.1041H5.58508V19.5521L3.17825 21.9686H0V0H28.7894ZM28.7894 13.8402V3.26391L26.3825 5.71184H7.9919L5.58508 3.26391V13.8402L7.9919 11.3923H26.3825L28.7894 13.8402Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M40.6951 0L43.1019 2.44793V21.9686H39.8928L37.486 19.5521V0H40.6951Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M69.3373 16.2882H78.1932L80.5692 18.7361V21.9686H67.0231C66.9922 21.9372 51.8107 6.52782 51.7798 6.49644V19.5521L49.373 21.9686H46.1948V0H53.3535L69.3373 16.2882ZM77.391 0H80.5692V11.3923L78.1932 13.8402H74.9841V2.44793L77.391 0Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M106.823 16.2882H115.679L118.055 18.7361V21.9686H104.509C104.478 21.9372 89.2967 6.52782 89.2658 6.49644V19.5521L86.859 21.9686H83.6808V0H90.8395L106.823 16.2882ZM114.877 0H118.055V11.3923L115.679 13.8402H112.47V2.44793L114.877 0Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M149.956 0L155.542 5.71184V21.9686H152.363L149.956 19.5521V14.6562L147.55 17.1041H126.752V19.5521L124.345 21.9686H121.167V5.71184L126.752 0H149.956ZM149.956 11.3923V3.26391L147.55 5.71184H129.159L126.752 3.26391V13.8402L129.159 11.3923H149.956Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M166.645 5.71184L164.238 3.26391V18.7361L166.645 16.2882H190.652L193.028 18.7361V21.9686H164.238L158.653 16.2882V5.71184L164.238 0H193.028V3.26391L190.652 5.71184H166.645Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M228.138 16.2882L230.514 18.7361V21.9686H196.14V0H199.318L201.725 2.44793V18.7361L204.131 16.2882H228.138Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M241.617 16.2882H265.624L268 18.7361V22H233.626V10.6077L236.002 8.15977H252.016V11.4237L249.609 13.8716H241.617L239.211 11.4237V18.7361L241.617 16.2882ZM233.626 0.0313761H268V3.29529L265.624 5.71184H236.002L233.626 3.29529V0.0313761Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M88.9364 31L90.1236 32.2325V38.7675L88.9364 39.9872H83V31H88.9364ZM88.9364 38.7675V32.2325H84.1873V38.7675H88.9364Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M94.6369 38.7675H100.573V39.9872H93.4496V31H100.573V32.2325H94.6369V35.622L95.4408 34.7746H99.9796V36.0071H94.6369V38.7675Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M110.936 33.465H109.749V32.2325H105V34.7746H109.749L110.936 36.0071V38.7675L109.749 39.9872H105L103.812 38.7675V37.5349H105V38.7675H109.749V36.0071H105L103.812 34.7746V32.2325L105 31.0128H109.749L110.936 32.2325V33.465Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M120.178 32.2325H118.335V38.7675H120.178V39.9872H115.305V38.7675H117.148V32.2325H115.305V31H120.178V32.2325Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M125.816 31H130.565L131.752 32.2325V33.4651H130.565V32.2325H125.816V38.7675H130.565V36.418H128.191V35.1983H131.752V38.7675L130.565 39.9872H125.816L124.629 38.7675V32.2325L125.816 31Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M141.015 31H142.202V40H141.015V36.0071H139.716L136.266 32.4251V40H135.078V31H136.575L141.015 35.622V31Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M163.472 38.7675V39.9872H156.348V31H157.536V38.7675H163.472Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M167.614 31H172.363L173.551 32.2325V39.9872H172.363V36.418H167.614V39.9872H166.427V32.2325L167.614 31ZM168.418 35.1983H172.363V32.2325H167.614V36.0328L168.418 35.1983Z" fill="currentColor"></path>
-               <path stroke-width="0" d="M184 32.2325V34.6205L183.246 35.3909L184 36.174V38.7675L182.813 39.9872H176.876V31H182.813L184 32.2325ZM182.813 38.7675V36.0071H178.064V38.7675H182.813ZM182.813 34.7746V32.2325H178.064V35.622L178.868 34.7746H182.813Z" fill="currentColor"></path>
+      <span class="frames">
+        <div>
+          <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_102_2)">
+              <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="5" />
+            </g>
+            <defs>
+              <clipPath id="clip0_102_2">
+                <rect width="127" height="127" fill="var(--White)" />
+              </clipPath>
+            </defs>
+          </svg>
+          <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_102_2)">
+              <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="5" />
+            </g>
+            <defs>
+              <clipPath id="clip0_102_2">
+                <rect width="127" height="127" fill="var(--White)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_102_2)">
+              <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="5" />
+            </g>
+            <defs>
+              <clipPath id="clip0_102_2">
+                <rect width="127" height="127" fill="var(--White)" />
+              </clipPath>
+            </defs>
+          </svg>
+          <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_102_2)">
+              <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="5" />
+            </g>
+            <defs>
+              <clipPath id="clip0_102_2">
+                <rect width="127" height="127" fill="var(--White)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </span>
+      <div class="loader_cross_div">
+        <svg viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M63.5 0L63.5 127M126.5 64L-0.5 64" stroke="#090909" stroke-width="5" />
+        </svg>
+        <svg viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M63.5 0L63.5 127M126.5 64L-0.5 64" stroke="#090909" stroke-width="5" />
+        </svg>
+      </div>
+      <div class="line1 lines"></div>
+      <div class="circle"></div>
+      <div class="line2 lines"></div>
+    </div>
+    <nav>
+      <a href="#" class="nav_frame_links nav_left">
+        <p>PLANS</p>
+        <span class="frames">
+          <div>
+            <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_102_2)">
+                <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+              </g>
+              <defs>
+                <clipPath id="clip0_102_2">
+                  <rect width="127" height="127" fill="var(--White)" />
+                </clipPath>
+              </defs>
             </svg>
-         </a>
-         <a href="#" class="nav_frame_links nav_right">
-            <p>MENU</p>
-            <span class="frames">
-               <div>
-                  <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                     <g clip-path="url(#clip0_102_2)">
-                        <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                     </g>
-                     <defs>
-                        <clipPath id="clip0_102_2">
-                           <rect width="127" height="127" fill="var(--White)" />
-                        </clipPath>
-                     </defs>
-                  </svg>
-                  <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                     <g clip-path="url(#clip0_102_2)">
-                        <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                     </g>
-                     <defs>
-                        <clipPath id="clip0_102_2">
-                           <rect width="127" height="127" fill="var(--White)" />
-                        </clipPath>
-                     </defs>
-                  </svg>
-               </div>
-               <div>
-                  <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                     <g clip-path="url(#clip0_102_2)">
-                        <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                     </g>
-                     <defs>
-                        <clipPath id="clip0_102_2">
-                           <rect width="127" height="127" fill="var(--White)" />
-                        </clipPath>
-                     </defs>
-                  </svg>
-                  <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                     <g clip-path="url(#clip0_102_2)">
-                        <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                     </g>
-                     <defs>
-                        <clipPath id="clip0_102_2">
-                           <rect width="127" height="127" fill="var(--White)" />
-                        </clipPath>
-                     </defs>
-                  </svg>
-               </div>
-            </span>
-         </a>
-      </nav>
-      <div id="wrapper">
-         <main>
-            <div class="hero_big_title_div">
-               <h1>STREAMLINED</h1>
-               <br />
-               <span><h1>DESIGN</h1></span>
-               <br />
-               <h1>OPERATIONS</h1>
+            <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_102_2)">
+                <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+              </g>
+              <defs>
+                <clipPath id="clip0_102_2">
+                  <rect width="127" height="127" fill="var(--White)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_102_2)">
+                <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+              </g>
+              <defs>
+                <clipPath id="clip0_102_2">
+                  <rect width="127" height="127" fill="var(--White)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_102_2)">
+                <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+              </g>
+              <defs>
+                <clipPath id="clip0_102_2">
+                  <rect width="127" height="127" fill="var(--White)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </span>
+      </a>
+      <a href="index.html" class="nav_logo">
+        <svg class="nav_logo_svg" overflow="visible" viewBox="0 0 268 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-width="0" d="M28.7894 0L34.3744 5.71184V17.1041H5.58508V19.5521L3.17825 21.9686H0V0H28.7894ZM28.7894 13.8402V3.26391L26.3825 5.71184H7.9919L5.58508 3.26391V13.8402L7.9919 11.3923H26.3825L28.7894 13.8402Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M40.6951 0L43.1019 2.44793V21.9686H39.8928L37.486 19.5521V0H40.6951Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M69.3373 16.2882H78.1932L80.5692 18.7361V21.9686H67.0231C66.9922 21.9372 51.8107 6.52782 51.7798 6.49644V19.5521L49.373 21.9686H46.1948V0H53.3535L69.3373 16.2882ZM77.391 0H80.5692V11.3923L78.1932 13.8402H74.9841V2.44793L77.391 0Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M106.823 16.2882H115.679L118.055 18.7361V21.9686H104.509C104.478 21.9372 89.2967 6.52782 89.2658 6.49644V19.5521L86.859 21.9686H83.6808V0H90.8395L106.823 16.2882ZM114.877 0H118.055V11.3923L115.679 13.8402H112.47V2.44793L114.877 0Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M149.956 0L155.542 5.71184V21.9686H152.363L149.956 19.5521V14.6562L147.55 17.1041H126.752V19.5521L124.345 21.9686H121.167V5.71184L126.752 0H149.956ZM149.956 11.3923V3.26391L147.55 5.71184H129.159L126.752 3.26391V13.8402L129.159 11.3923H149.956Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M166.645 5.71184L164.238 3.26391V18.7361L166.645 16.2882H190.652L193.028 18.7361V21.9686H164.238L158.653 16.2882V5.71184L164.238 0H193.028V3.26391L190.652 5.71184H166.645Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M228.138 16.2882L230.514 18.7361V21.9686H196.14V0H199.318L201.725 2.44793V18.7361L204.131 16.2882H228.138Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M241.617 16.2882H265.624L268 18.7361V22H233.626V10.6077L236.002 8.15977H252.016V11.4237L249.609 13.8716H241.617L239.211 11.4237V18.7361L241.617 16.2882ZM233.626 0.0313761H268V3.29529L265.624 5.71184H236.002L233.626 3.29529V0.0313761Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M88.9364 31L90.1236 32.2325V38.7675L88.9364 39.9872H83V31H88.9364ZM88.9364 38.7675V32.2325H84.1873V38.7675H88.9364Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M94.6369 38.7675H100.573V39.9872H93.4496V31H100.573V32.2325H94.6369V35.622L95.4408 34.7746H99.9796V36.0071H94.6369V38.7675Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M110.936 33.465H109.749V32.2325H105V34.7746H109.749L110.936 36.0071V38.7675L109.749 39.9872H105L103.812 38.7675V37.5349H105V38.7675H109.749V36.0071H105L103.812 34.7746V32.2325L105 31.0128H109.749L110.936 32.2325V33.465Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M120.178 32.2325H118.335V38.7675H120.178V39.9872H115.305V38.7675H117.148V32.2325H115.305V31H120.178V32.2325Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M125.816 31H130.565L131.752 32.2325V33.4651H130.565V32.2325H125.816V38.7675H130.565V36.418H128.191V35.1983H131.752V38.7675L130.565 39.9872H125.816L124.629 38.7675V32.2325L125.816 31Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M141.015 31H142.202V40H141.015V36.0071H139.716L136.266 32.4251V40H135.078V31H136.575L141.015 35.622V31Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M163.472 38.7675V39.9872H156.348V31H157.536V38.7675H163.472Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M167.614 31H172.363L173.551 32.2325V39.9872H172.363V36.418H167.614V39.9872H166.427V32.2325L167.614 31ZM168.418 35.1983H172.363V32.2325H167.614V36.0328L168.418 35.1983Z" fill="currentColor"></path>
+          <path stroke-width="0" d="M184 32.2325V34.6205L183.246 35.3909L184 36.174V38.7675L182.813 39.9872H176.876V31H182.813L184 32.2325ZM182.813 38.7675V36.0071H178.064V38.7675H182.813ZM182.813 34.7746V32.2325H178.064V35.622L178.868 34.7746H182.813Z" fill="currentColor"></path>
+        </svg>
+      </a>
+      <a href="#" class="nav_frame_links nav_right">
+        <p>MENU</p>
+        <span class="frames">
+          <div>
+            <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_102_2)">
+                <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+              </g>
+              <defs>
+                <clipPath id="clip0_102_2">
+                  <rect width="127" height="127" fill="var(--White)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_102_2)">
+                <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+              </g>
+              <defs>
+                <clipPath id="clip0_102_2">
+                  <rect width="127" height="127" fill="var(--White)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_102_2)">
+                <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+              </g>
+              <defs>
+                <clipPath id="clip0_102_2">
+                  <rect width="127" height="127" fill="var(--White)" />
+                </clipPath>
+              </defs>
+            </svg>
+            <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_102_2)">
+                <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+              </g>
+              <defs>
+                <clipPath id="clip0_102_2">
+                  <rect width="127" height="127" fill="var(--White)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </span>
+      </a>
+    </nav>
+    <div id="wrapper">
+      <main>
+        <div class="hero_big_title_div">
+          <h1>STREAMLINED</h1>
+          <br />
+          <span><h1>DESIGN</h1></span>
+          <br />
+          <h1>OPERATIONS</h1>
+        </div>
+        <div class="hero_small_title_div">
+          <p>Stay agile, stay ahead. Unlimited requests. One simple subscription.</p>
+        </div>
+        <a href="#" class="hovering_buttons">FIND YOUR PLAN </a>
+      </main>
+      <div id="area2">
+        <div class="images_div">
+          <img src="Image/q9jJt9tP3fmSayyrmOcW2WtSUo.jpg" alt="" />
+          <span class="frames">
+            <div>
+              <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-            <div class="hero_small_title_div">
-               <p>Stay agile, stay ahead. Unlimited requests. One simple subscription.</p>
+            <div>
+              <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-            <a href="#" class="hovering_buttons">FIND YOUR PLAN </a>
-         </main>
-         <div id="area2">
-            <div class="images_div">
-               <img src="Image/q9jJt9tP3fmSayyrmOcW2WtSUo.jpg" alt="" />
-               <span class="frames">
-                  <div>
-                     <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                  </div>
-                  <div>
-                     <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                  </div>
-               </span>
+          </span>
+        </div>
+        <div class="images_div">
+          <img src="Image/BoodL7ihhd5qEX5bfmhgxZGoOs.jpg" alt="" />
+          <span class="frames">
+            <div>
+              <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-            <div class="images_div">
-               <img src="Image/BoodL7ihhd5qEX5bfmhgxZGoOs.jpg" alt="" />
-               <span class="frames">
-                  <div>
-                     <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                  </div>
-                  <div>
-                     <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                  </div>
-               </span>
+            <div>
+              <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-            <div class="images_div">
-               <img src="Image/ftLRrAkdFiJUs2sgLtdIyVCbNyk.jpg" alt="" />
-               <span class="frames">
-                  <div>
-                     <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                  </div>
-                  <div>
-                     <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                  </div>
-               </span>
+          </span>
+        </div>
+        <div class="images_div">
+          <img src="Image/ftLRrAkdFiJUs2sgLtdIyVCbNyk.jpg" alt="" />
+          <span class="frames">
+            <div>
+              <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-            <div class="images_div">
-               <img src="Image/NDc3QkpKUFptwlxGcdz1JnUsgo.jpg" alt="" />
-               <span class="frames">
-                  <div>
-                     <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                  </div>
-                  <div>
-                     <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                  </div>
-               </span>
+            <div>
+              <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-         </div>
-         <div id="area3">
-            <div class="fade_orange_titles">
-               <h6>INITIATE // PROCESS</h6>
-               <span class="frames">
-                  <div>
-                     <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     <svg style="opacity: 0" class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                  </div>
-                  <div>
-                     <svg style="opacity: 0" class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                     <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_102_2)">
-                           <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
-                        </g>
-                        <defs>
-                           <clipPath id="clip0_102_2">
-                              <rect width="127" height="127" fill="var(--White)" />
-                           </clipPath>
-                        </defs>
-                     </svg>
-                  </div>
-               </span>
+          </span>
+        </div>
+        <div class="images_div">
+          <img src="Image/NDc3QkpKUFptwlxGcdz1JnUsgo.jpg" alt="" />
+          <span class="frames">
+            <div>
+              <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <svg class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-            <div class="area3_big_title_div">
-               <div class="orange_texts_shutters_div">
-                  <div class="orange_shutters"></div>
-                  <h1>BLUEPRINT</h1>
-               </div>
-               <div class="orange_texts_shutters_div">
-                  <div class="orange_shutters"></div>
-                  <h1>TO THE</h1>
-               </div>
-               <div class="orange_texts_shutters_div">
-                  <div class="orange_shutters"></div>
-                  <h1>FUTURE</h1>
-               </div>
+            <div>
+              <svg class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-            <p>Our process for your next-gen digital excellence.</p>
-         </div>
-         <div id="area4">
-            <div class="area4_content">
-               <div class="area4_boxes">
-                  <p>01</p>
-                  <svg class="subscribe_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22L8 18H16L12 22ZM12 2L16 6H8L12 2ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM2 12L6 8V16L2 12ZM22 12L18 16V8L22 12Z" fill="currentColor"></path></svg>
-                  <h4>SUBSCRIBE_</h4>
-                  <h6>Pick a plan and load up as many requests as you would like.</h6>
-               </div>
-               <div class="area4_boxes">
-                  <p>01</p>
-                  <svg class="subscribe_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22L8 18H16L12 22ZM12 2L16 6H8L12 2ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM2 12L6 8V16L2 12ZM22 12L18 16V8L22 12Z" fill="currentColor"></path></svg>
-                  <h4>SUBSCRIBE_</h4>
-                  <h6>Pick a plan and load up as many requests as you would like.</h6>
-               </div>
-               <div class="area4_boxes">
-                  <p>01</p>
-                  <svg class="subscribe_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22L8 18H16L12 22ZM12 2L16 6H8L12 2ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM2 12L6 8V16L2 12ZM22 12L18 16V8L22 12Z" fill="currentColor"></path></svg>
-                  <h4>SUBSCRIBE_</h4>
-                  <h6>Pick a plan and load up as many requests as you would like.</h6>
-               </div>
-               <div class="area4_boxes">
-                  <p>01</p>
-                  <svg class="subscribe_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22L8 18H16L12 22ZM12 2L16 6H8L12 2ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM2 12L6 8V16L2 12ZM22 12L18 16V8L22 12Z" fill="currentColor"></path></svg>
-                  <h4>SUBSCRIBE_</h4>
-                  <h6>Pick a plan and load up as many requests as you would like.</h6>
-               </div>
+          </span>
+        </div>
+      </div>
+      <div id="area3">
+        <div class="fade_orange_titles">
+          <h6>INITIATE // PROCESS</h6>
+          <span class="frames">
+            <div>
+              <svg class="s1" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <svg style="opacity: 0" class="s2" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </div>
-         </div>
-
-         <div id="wrapper_bg">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-         </div>
-         <div class="spacer"></div>
+            <div>
+              <svg style="opacity: 0" class="s3" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <svg class="s4" viewBox="0 0 127 127" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_102_2)">
+                  <path d="M1.25 0L1.24999 127M127 1.25001L0 1.25" stroke-width="20" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2">
+                    <rect width="127" height="127" fill="var(--White)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </span>
+        </div>
+        <div class="area3_big_title_div">
+          <div class="orange_texts_shutters_div">
+            <div class="orange_shutters"></div>
+            <h1>BLUEPRINT</h1>
+          </div>
+          <div class="orange_texts_shutters_div">
+            <div class="orange_shutters"></div>
+            <h1>TO THE</h1>
+          </div>
+          <div class="orange_texts_shutters_div">
+            <div class="orange_shutters"></div>
+            <h1>FUTURE</h1>
+          </div>
+        </div>
+        <p>Our process for your next-gen digital excellence.</p>
+      </div>
+      <div id="area4">
+        <div class="area4_content">
+          <div class="area4_boxes">
+            <p>01</p>
+            <svg class="subscribe_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 22L8 18H16L12 22ZM12 2L16 6H8L12 2ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM2 12L6 8V16L2 12ZM22 12L18 16V8L22 12Z" fill="currentColor"></path>
+            </svg>
+            <h4>SUBSCRIBE_</h4>
+            <h6>Pick a plan and load up as many requests as you would like.</h6>
+          </div>
+          <div class="area4_boxes">
+            <p>01</p>
+            <svg class="subscribe_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 22L8 18H16L12 22ZM12 2L16 6H8L12 2ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM2 12L6 8V16L2 12ZM22 12L18 16V8L22 12Z" fill="currentColor"></path>
+            </svg>
+            <h4>SUBSCRIBE_</h4>
+            <h6>Pick a plan and load up as many requests as you would like.</h6>
+          </div>
+          <div class="area4_boxes">
+            <p>01</p>
+            <svg class="subscribe_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 22L8 18H16L12 22ZM12 2L16 6H8L12 2ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM2 12L6 8V16L2 12ZM22 12L18 16V8L22 12Z" fill="currentColor"></path>
+            </svg>
+            <h4>SUBSCRIBE_</h4>
+            <h6>Pick a plan and load up as many requests as you would like.</h6>
+          </div>
+          <div class="area4_boxes">
+            <p>01</p>
+            <svg class="subscribe_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 22L8 18H16L12 22ZM12 2L16 6H8L12 2ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM2 12L6 8V16L2 12ZM22 12L18 16V8L22 12Z" fill="currentColor"></path>
+            </svg>
+            <h4>SUBSCRIBE_</h4>
+            <h6>Pick a plan and load up as many requests as you would like.</h6>
+          </div>
+        </div>
       </div>
 
-      <!-- Lenis Smooth Scroll -->
-      <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+      <div id="wrapper_bg">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="spacer"></div>
+    </div>
 
-      <!-- GSAP -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
 
-      <script src="index.js"></script>
-   </body>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
 </html>
