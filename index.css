@@ -712,6 +712,7 @@ main {
    height: 100vh;
    height: 100svh;
    user-select: none;
+   position: relative;
 
    & .frames {
       padding: 1em;
@@ -720,6 +721,25 @@ main {
    & .frames svg {
       stroke: var(--Black);
       width: 0.8em;
+   }
+
+   & *::selection {
+      background-color: var(--Black);
+      color: var(--White);
+   }
+
+   & p {
+      font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
+      color: var(--Black);
+      font-size: 1rem;
+      position: absolute;
+
+      &:nth-child(1) {
+         top: 2em;
+      }
+      &:nth-child(2) {
+         bottom: 2em;
+      }
    }
 }
 
@@ -738,6 +758,7 @@ main {
    flex-direction: column;
    align-items: center;
    justify-content: space-between;
+   pointer-events: none;
 }
 
 .gradients {
