@@ -95,3 +95,30 @@ document.querySelector("nav").addEventListener("click", (clk) => {
       gsap.to("#wrapper, nav", { opacity: 1, duration: 0.5 });
    }
 });
+
+// area6 split screnn pinning animation.
+gsap.from(".area6_left", {
+   x: "-105%",
+   scrollTrigger: {
+      trigger: ".area6_left",
+      scrub: 1,
+      start: "top bottom",
+      end: "bottom bottom",
+   },
+});
+gsap.to("#area6", {
+   scrollTrigger: {
+      trigger: "#area6",
+      start: "top top",
+      end: "bottom bottom",
+      pin: ".area6_left",
+   },
+});
+gsap.to("#area6", {
+   scrollTrigger: {
+      trigger: "#area6",
+      start: "top top",
+      end: "bottom bottom",
+      pin: ".area6_right_gradient_div",
+   },
+});
