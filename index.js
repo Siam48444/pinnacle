@@ -77,3 +77,12 @@ document.querySelector("#wrapper").addEventListener("click", () => {
       ease: "expo.out",
    });
 });
+document.querySelector("nav").addEventListener("click", (clk) => {
+   if (clk.target.matches("nav")) {
+      gsap.to("#menu", {
+         x: 0,
+         duration: 1,
+         ease: "expo.out",
+      });
+   }
+});

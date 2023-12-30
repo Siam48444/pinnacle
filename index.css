@@ -159,10 +159,10 @@ html {
    background-color: var(--Orange);
    position: fixed;
    top: 0;
-   right: -50vw;
+   right: -30vw;
    bottom: 0;
    z-index: 999;
-   width: 50vw;
+   width: 30vw;
    user-select: none;
 
    & * {
@@ -183,7 +183,7 @@ html {
 
 .menu_top {
    padding-inline: clamp(1em, 3vw, 2em);
-   height: 12%;
+   height: clamp(4em, 10vw, 8em);
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -255,17 +255,49 @@ html {
    justify-content: start;
    gap: 1em;
    border-bottom: solid 0.005em var(--Black_Lighter);
+   position: relative;
+   overflow: hidden;
+   transition: padding-block 200ms ease-in-out;
+
+   &::before {
+      position: absolute;
+      content: "";
+      width: 0.5%;
+      background-color: var(--Black);
+      z-index: -1;
+      transform: translateY(110%);
+      transition: transform 200ms ease-in-out;
+   }
+
+   &::before {
+      inset: 0 auto 0 0;
+   }
+
+   &:hover::before {
+      transform: translateY(0);
+   }
+
+   &:hover {
+      padding-block: 2em;
+   }
 }
 
 .menu_bottom {
    display: flex;
    align-items: center;
+   flex-direction: column;
    justify-content: space-between;
    width: 100%;
-   height: 15%;
+   gap: 1em;
+   margin-block: 2em;
 
    & .hovering_buttons {
+      width: 100%;
       border: solid 0.005em var(--Black_Lighter);
+
+      &:hover {
+         background-color: var(--White);
+      }
    }
 }
 
@@ -668,13 +700,10 @@ main {
 
 @media (width <= 1000px) {
    #menu {
-      width: 70vw;
-      right: -70vw;
+      width: 50vw;
+      right: -50vw;
    }
 
-   .menu_bottom {
-      width: 70%;
-   }
    #area2 {
       grid-template-columns: repeat(2, 1fr);
    }
@@ -710,10 +739,6 @@ main {
       right: -100vw;
    }
 
-   .menu_bottom {
-      width: 80%;
-   }
-
    #area2 {
       grid-template-columns: 1fr;
    }
@@ -732,22 +757,6 @@ main {
 }
 
 @media (width <= 400px) {
-   #menu .frames {
-      display: none;
-   }
-
-   .menu_bottom {
-      flex-direction: column;
-      height: fit-content;
-      gap: 1em;
-      margin-top: 2em;
-      width: 100%;
-   }
-
-   .menu_bottom .hovering_buttons {
-      width: 100%;
-   }
-
    .hovering_buttons,
    .fade_orange_titles {
       width: 80%;
@@ -755,18 +764,25 @@ main {
 }
 
 @media (width <= 300px) {
-   .menu_bottom .hovering_buttons {
-      width: 100%;
-   }
-
    .nav_logo_svg {
       width: 8em;
    }
 }
 
+@media (height <= 600px) {
+   #menu .frames {
+      display: none;
+   }
+
+   main {
+      height: 100vh;
+      height: 100svh;
+   }
+}
+
 @media (height <= 500px) {
    .area4_boxes {
-      height: 120vh;
-      height: 120svh;
+      height: 110vh;
+      height: 110svh;
    }
 }
