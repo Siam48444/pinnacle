@@ -62,6 +62,8 @@ document.querySelector(".hamburger_button").addEventListener("click", () => {
       duration: 1,
       ease: "expo.out",
    });
+
+   gsap.to("#wrapper, nav", { opacity: 0.3, duration: 0.5 });
 });
 document.querySelector(".menu_exit").addEventListener("click", () => {
    gsap.to("#menu", {
@@ -69,6 +71,8 @@ document.querySelector(".menu_exit").addEventListener("click", () => {
       duration: 1,
       ease: "expo.out",
    });
+
+   gsap.to("#wrapper, nav", { opacity: 1, duration: 0.5 });
 });
 document.querySelector("#wrapper").addEventListener("click", () => {
    gsap.to("#menu", {
@@ -76,6 +80,8 @@ document.querySelector("#wrapper").addEventListener("click", () => {
       duration: 1,
       ease: "expo.out",
    });
+
+   gsap.to("#wrapper, nav", { opacity: 1, duration: 0.5 });
 });
 document.querySelector("nav").addEventListener("click", (clk) => {
    if (clk.target.matches("nav")) {
@@ -84,5 +90,7 @@ document.querySelector("nav").addEventListener("click", (clk) => {
          duration: 1,
          ease: "expo.out",
       });
+
+      gsap.to("#wrapper, nav", { opacity: 1, duration: 0.5 });
    }
 });
