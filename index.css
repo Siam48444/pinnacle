@@ -533,7 +533,7 @@ main {
    }
 }
 
-#area3 {
+#title_area {
    height: 90vh;
    height: 90svh;
    z-index: 2;
@@ -573,7 +573,7 @@ main {
    }
 }
 
-.area3_big_title_div {
+.title_area_big_title_div {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -782,7 +782,7 @@ main {
 
 @media (height <= 500px) {
    .area4_boxes {
-      height: 110vh;
-      height: 110svh;
+      height: 100vh;
+      height: 100svh;
    }
 }
