@@ -55,20 +55,22 @@ orangeShutters.forEach((shutter) => {
    });
 });
 
-// area4 small screen boxes appearing animation.
-// const area4Boxes = document.querySelectorAll(".area4_boxes");
-// if (window.innerWidth < 600) {
-//    boxesActivated();
-// }
-// function boxesActivated() {
-//    area4Boxes.forEach((box) => {
-//       gsap.from(box, {
-//          x: "-105%",
-//          scrollTrigger: {
-//             trigger: box,
-//             scrub: 1,
-//             end: "top 30%",
-//          },
-//       });
-//    });
-// }
+// hamburger button interaction.
+const hamburgerButton = document.querySelector(".hamburger_button");
+const menuExit = document.querySelector(".menu_exit");
+
+hamburgerButton.addEventListener("click", () => {
+   gsap.to("#wrapper, nav", { opacity: 0.3, pointerEvents: "none" });
+
+   // menu section control.
+   gsap.to("#menu", {
+      x: 0,
+      duration: 0.5,
+      ease: "expo.out",
+      pointerEvents: "all",
+   });
+});
+
+menuExit.addEventListener("click", () => {
+   gsap.to("#wrapper, nav", { opacity: 1, pointerEvents: "all" });
+});

@@ -154,6 +154,62 @@ html {
    }
 }
 
+#menu {
+   overflow: hidden;
+   transform: translateX(100%);
+   background-color: var(--Orange);
+   position: fixed;
+   inset: 0 0 0 auto;
+   z-index: 999;
+   width: 30vw;
+   user-select: none;
+
+   & * {
+      font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
+      color: var(--Black);
+   }
+
+   & .frames {
+      padding: 1em;
+
+      & svg {
+         stroke: var(--Black);
+         width: 0.8em;
+      }
+   }
+}
+
+.menu_top {
+   padding: 1.5em clamp(1em, 3vw, 2em);
+   height: fit-content;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: solid 0.005em var(--Black_Lighter);
+
+   & p {
+      font-size: 1rem;
+      margin-left: 50%;
+      transform: translateX(-50%);
+   }
+}
+
+.menu_exit {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0.1em;
+   cursor: pointer;
+   border: solid 0.005em var(--Black_Light);
+   border-radius: 50%;
+
+   & svg {
+      fill: var(--Black);
+      width: 1.5em;
+      height: 1.5em;
+   }
+}
+
 nav {
    position: fixed;
    inset: 0 0 auto 0;
