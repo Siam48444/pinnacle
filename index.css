@@ -25,13 +25,13 @@ html {
 
 :root {
    /* Colors */
-   --White: #d3dfee;
+   --White: #e1e8f1;
    --White_Light: #d3dfee80;
    --White_Dark: #53595e6e;
    --Orange: #f87612;
    --orange_Faded: #f1700e3b;
    --Black: #090909;
-   --Black_Light: #0909098c;
+   --Black_Light: #090909d0;
    --Black_Lighter: #09090931;
    --Dark_Gray: #191b1e;
 }
@@ -57,7 +57,7 @@ html {
    position: fixed;
    inset: 0;
    z-index: 99999999;
-   mix-blend-mode: multiply;
+   mix-blend-mode: darken;
    opacity: 0.15;
    pointer-events: none;
 }
