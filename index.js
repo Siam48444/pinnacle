@@ -24,7 +24,6 @@ function scrollingdUp() {
    gsap.to("nav", { y: 0, duration: 0.5, ease: "Power5.easeInOut" });
 }
 
-// gsap timelime.
 var tl = gsap.timeline();
 
 // gsap animations on load.
@@ -57,17 +56,19 @@ orangeShutters.forEach((shutter) => {
 });
 
 // area4 small screen boxes appearing animation.
-if (window.innerWidth < 600) {
-   const area4Boxes = document.querySelectorAll(".area4_boxes");
-
-   area4Boxes.forEach((box) => {
-      gsap.from(box, {
-         x: "-105%",
-         scrollTrigger: {
-            trigger: box,
-            scrub: 1,
-            end: "top 30%",
-         },
-      });
-   });
-}
+// const area4Boxes = document.querySelectorAll(".area4_boxes");
+// if (window.innerWidth < 600) {
+//    boxesActivated();
+// }
+// function boxesActivated() {
+//    area4Boxes.forEach((box) => {
+//       gsap.from(box, {
+//          x: "-105%",
+//          scrollTrigger: {
+//             trigger: box,
+//             scrub: 1,
+//             end: "top 30%",
+//          },
+//       });
+//    });
+// }
