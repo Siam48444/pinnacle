@@ -58,7 +58,7 @@ html {
   inset: 0;
   z-index: 99999999;
   mix-blend-mode: multiply;
-  opacity: 0.12;
+  opacity: 0.15;
   pointer-events: none;
 }
 
@@ -452,12 +452,12 @@ main {
 }
 
 .area4_content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  height: 80svh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 90vh;
+  height: 90svh;
   position: relative;
+  border-block: solid 0.005em var(--White_Dark);
 }
 
 .area4_boxes {
@@ -466,12 +466,18 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100%;
-  width: 25%;
   gap: 0.5em;
 
   & svg {
     width: 5em;
+  }
+
+  & p {
+    text-align: center;
+    font-family: PP_Supply_Mono_Semibold, Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    position: absolute;
+    top: 0;
   }
 
   & h4 {
@@ -484,21 +490,17 @@ main {
 
   & h6 {
     font-family: Aeonik_Regular, Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: clamp(1rem, 1vw, 1.2rem);
     width: 90%;
     text-align: center;
     line-height: 1.2;
   }
 
   &:not(:last-child) {
-    border-right: solid 0.005em var(--Black_Light);
+    border-right: solid 0.005em var(--White_Dark);
     background-color: var(--Black);
 
-    & svg {
-      color: var(--White);
-    }
-
-    & h4 {
+    &:has(p, h4, svg) {
       color: var(--White);
     }
 
@@ -510,11 +512,7 @@ main {
   &:last-child {
     background-color: var(--Orange);
 
-    & h4 {
-      color: var(--Black);
-    }
-
-    & h6 {
+    &:has(p, h4, h6, svg) {
       color: var(--Black);
     }
   }
@@ -531,6 +529,10 @@ main {
 
   .images_div:hover .frames {
     padding: clamp(0.2em, 2vw, 2em);
+  }
+
+  .area4_content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
