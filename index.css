@@ -156,10 +156,9 @@ html {
 
 #menu {
    overflow: hidden;
-   transform: translateX(100%);
    background-color: var(--Orange);
    position: fixed;
-   inset: 0 0 0 auto;
+   inset: 0 -30vw 0 auto;
    z-index: 999;
    width: 30vw;
    user-select: none;
@@ -167,6 +166,7 @@ html {
    & * {
       font-family: PP_Supply_Mono_Regular, Arial, Helvetica, sans-serif;
       color: var(--Black);
+      font-size: 1rem;
    }
 
    & .frames {
@@ -188,7 +188,6 @@ html {
    border-bottom: solid 0.005em var(--Black_Lighter);
 
    & p {
-      font-size: 1rem;
       margin-left: 50%;
       transform: translateX(-50%);
    }
@@ -198,15 +197,37 @@ html {
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 0.1em;
+   padding: 0.5em;
    cursor: pointer;
-   border: solid 0.005em var(--Black_Light);
+   border: solid 0.005em var(--Black_Lighter);
    border-radius: 50%;
+   position: relative;
+   overflow: hidden;
 
    & svg {
       fill: var(--Black);
-      width: 1.5em;
-      height: 1.5em;
+      width: 1.2em;
+      height: 1.2em;
+      transition: fill 200ms ease-in-out;
+   }
+
+   &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-color: var(--Black);
+      z-index: -1;
+      border-radius: 50%;
+      transform: translateY(100%);
+      transition: transform 200ms ease-in-out;
+   }
+
+   &:hover::after {
+      transform: translateY(0);
+   }
+
+   &:hover svg {
+      fill: var(--White);
    }
 }
 

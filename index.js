@@ -55,22 +55,25 @@ orangeShutters.forEach((shutter) => {
    });
 });
 
-// hamburger button interaction.
-const hamburgerButton = document.querySelector(".hamburger_button");
-const menuExit = document.querySelector(".menu_exit");
-
-hamburgerButton.addEventListener("click", () => {
-   gsap.to("#wrapper, nav", { opacity: 0.3, pointerEvents: "none" });
-
-   // menu section control.
+// hamburger button and menu interaction.
+document.querySelector(".hamburger_button").addEventListener("click", () => {
    gsap.to("#menu", {
-      x: 0,
-      duration: 0.5,
+      x: "-100%",
+      duration: 1,
       ease: "expo.out",
-      pointerEvents: "all",
    });
 });
-
-menuExit.addEventListener("click", () => {
-   gsap.to("#wrapper, nav", { opacity: 1, pointerEvents: "all" });
+document.querySelector(".menu_exit").addEventListener("click", () => {
+   gsap.to("#menu", {
+      x: 0,
+      duration: 1,
+      ease: "expo.out",
+   });
+});
+document.querySelector("#wrapper").addEventListener("click", () => {
+   gsap.to("#menu", {
+      x: 0,
+      duration: 1,
+      ease: "expo.out",
+   });
 });
