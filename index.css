@@ -539,6 +539,11 @@ main {
             color: var(--Black);
          }
       }
+
+      & *::selection {
+         background-color: var(--Black);
+         color: var(--White);
+      }
    }
 }
 
