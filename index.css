@@ -468,14 +468,55 @@ main {
   position: relative;
   height: 100%;
   width: 25%;
+  gap: 0.5em;
+
+  & svg {
+    width: 5em;
+  }
+
+  & h4 {
+    font-family: PP_Supply_Mono_Semibold, Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 0.5em;
+  }
+
+  & h6 {
+    font-family: Aeonik_Regular, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    width: 90%;
+    text-align: center;
+    line-height: 1.2;
+  }
 
   &:not(:last-child) {
     border-right: solid 0.005em var(--Black_Light);
     background-color: var(--Black);
+
+    & svg {
+      color: var(--White);
+    }
+
+    & h4 {
+      color: var(--White);
+    }
+
+    & h6 {
+      color: var(--White_Light);
+    }
   }
 
   &:last-child {
     background-color: var(--Orange);
+
+    & h4 {
+      color: var(--Black);
+    }
+
+    & h6 {
+      color: var(--Black);
+    }
   }
 }
 
