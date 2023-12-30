@@ -50,8 +50,24 @@ orangeShutters.forEach((shutter) => {
       height: 0,
       scrollTrigger: {
          trigger: shutter,
-         end: "bottom 80%",
+         end: "top 70%",
          scrub: 1,
       },
    });
 });
+
+// area4 small screen boxes appearing animation.
+if (window.innerWidth < 600) {
+   const area4Boxes = document.querySelectorAll(".area4_boxes");
+
+   area4Boxes.forEach((box) => {
+      gsap.from(box, {
+         x: "-105%",
+         scrollTrigger: {
+            trigger: box,
+            scrub: 1,
+            end: "top 30%",
+         },
+      });
+   });
+}
